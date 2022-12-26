@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "45e87d97-1ecb-400e-9bee-2aea0d44f603",
+		"name": "TiendaVirtual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8354915"
+	},
+	"item": [
+		{
+			"name": "Lista Categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/product/category/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"product",
+						"category",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/product/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"product",
+						"list"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "FISH",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basic client info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/client/basic/40126170",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"client",
+						"basic",
+						"40126170"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/cart/product/add?clientOid=1&productOid=2&cantidad=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"cart",
+						"product",
+						"add"
+					],
+					"query": [
+						{
+							"key": "clientOid",
+							"value": "1"
+						},
+						{
+							"key": "productOid",
+							"value": "2"
+						},
+						{
+							"key": "cantidad",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/cart/delete/aedb4e2e-bdc9-4073-bd12-81b0482c6c05",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"cart",
+						"delete",
+						"aedb4e2e-bdc9-4073-bd12-81b0482c6c05"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product From Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/cart/product/delete?cartOid=edf11c07-2d32-459c-a410-609fa2d06e48&productOid=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"cart",
+						"product",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "cartOid",
+							"value": "edf11c07-2d32-459c-a410-609fa2d06e48"
+						},
+						{
+							"key": "productOid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/cart/edf11c07-2d32-459c-a410-609fa2d06e48",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"cart",
+						"edf11c07-2d32-459c-a410-609fa2d06e48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finish cart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/cart/state/59675b31-33df-4c37-8a8c-4dc3de3826df",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"cart",
+						"state",
+						"59675b31-33df-4c37-8a8c-4dc3de3826df"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Datos de descuento parametrizados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/applicationProperties/descuento",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"applicationProperties",
+						"descuento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Preview Cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/priv/cart/preview/6de41f34-1904-4443-aef7-81169f0fec74",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"priv",
+						"cart",
+						"preview",
+						"6de41f34-1904-4443-aef7-81169f0fec74"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
