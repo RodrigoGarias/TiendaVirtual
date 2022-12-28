@@ -1,9 +1,6 @@
 package com.danaide.tiendavirtual.enums;
 
 public enum ProductCategory {
-
-	VEHICULOS,
-	INMUEBLES,
 	SUPERMERCADO,
 	TECNOLOGIA,
 	ELECTRODOMESTICOS,
@@ -33,5 +30,4 @@ public enum ProductCategory {
 	QUINTAS,
 	COCHERAS,
 	CASAS
-	
 }

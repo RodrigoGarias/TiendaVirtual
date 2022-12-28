@@ -21,7 +21,7 @@ public interface ProductRepo extends JpaRepository< Product , String >{
 			+ "where "
 			+ "( :category is null or prod.category = :category )"
 			+ "order by prod.name "
-			+ "limit ( :size * ( :page - 1) ) , ( :size * :page )" , 
+			+ "limit  ( :size * ( :page - 1) ) , :size  " , 
 			nativeQuery = true )
 	public Set<Product> pageableList(  @Param("size") Integer size ,  @Param("page") Integer page , @Param("category") Integer category );
 	
